@@ -1,0 +1,58 @@
+.videoWrapper {
+    display: block;
+    position: relative;
+    width:100%;
+    height: calc(100vh - 5rem);
+    overflow: hidden;
+}
+video {
+    position: absolute; 
+    left: 0; 
+    bottom: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: -1;
+    background-size: cover;
+    overflow: hidden !important;
+ 
+}
+.videoWrapper h1 {
+    z-index: 20;
+}
+.homepageCtaText {
+   display:hidden;
+   background-color: #313131;
+   margin: 15rem 0 0 10rem;
+   color:White;
+   display: block;
+   width: 10rem;
+   height:8rem;
+   padding:2rem;
+   transition: 0.3s ease;
+   z-index: 3;
+   position: relative;
+   font-size: 0.9em;
+}
+.homepageCTA {   
+   position: relative;
+   background-color: white;
+   color: #313131;
+   margin: 0 0 0 10rem;
+   display: block;
+   width: 10rem;
+   height: 8rem;
+   padding:2rem;
+   transition: 0.3s ease;
+   z-index: -1rem;
+   font-size: 0.9em;
+   transform: translate(0, -12rem) 
+}
+
+.homepageCtaText:hover  + a .homepageCTA  {
+    transform: translate(14rem, -12rem)
+}
+.homepageCTA:hover {
+    transform: translate(14rem, -12rem)
+
+}
+ 

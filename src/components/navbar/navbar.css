@@ -1,0 +1,72 @@
+.navbar {
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+    font-family: 'Josefin Sans', sans-serif;
+    opacity: 1  ;
+
+}
+.navbar a, .navbar a:visited {
+    color: #313131;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+}
+.homepageContent a, .homepageContent a {
+    text-decoration: none;
+    color: #313131
+}
+.navbar a:after {
+    /*from https://www.30secondsofcode.org/css/s/hover-underline-animation*/
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #313131;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+.navbar a:hover:after {
+    transform: scaleX(1.2);
+    transform-origin: bottom left;
+  }
+.logoWrapper {
+    margin-left: 10rem;
+    font-family: 'Source Serif Pro', serif;
+
+}
+.logo {
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
+    letter-spacing: 1px; 
+}
+/* .logo:hover {
+    letter-spacing: 3px;
+    transform: translateX(-6px);
+} */
+.navbarLinks {
+    margin-right: 10rem;
+    display: flex;
+    gap: 5rem
+   
+}
+.navbarLinks a {
+    transition: 0.3s ease-in-out;
+    
+    position: relative;
+}
+/* .navbarLinks a:nth-child(1):hover {
+    letter-spacing: 3px;
+    transform: translateX(6px); 
+   }
+.navbarLinks a:nth-child(2):hover {
+    letter-spacing: 2px;
+    transform: translateX(8px); 
+    margin-left: -16px; /* 8 letters for "checkout * 2px leter spacing
+} */
