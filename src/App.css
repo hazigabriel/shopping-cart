@@ -7,3 +7,15 @@
 font-family: 'Josefin Sans', sans-serif;
 font-family: 'Source Serif Pro', serif;
 */
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: 10rem 1fr 10rem;
+}
+.navbarGrid {
+  background-color: #f3f3f3;
+
+}
+.gridItem {
+  grid-column: 2/ 3;
+}

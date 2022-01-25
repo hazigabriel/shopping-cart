@@ -1,5 +1,5 @@
 .navbar {
-    background-color: #f3f3f3;
+    /* background-color: #f3f3f3; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -36,7 +36,6 @@
     transform-origin: bottom left;
   }
 .logoWrapper {
-    margin-left: 10rem;
     font-family: 'Source Serif Pro', serif;
 
 }
@@ -51,7 +50,6 @@
     transform: translateX(-6px);
 } */
 .navbarLinks {
-    margin-right: 10rem;
     display: flex;
     gap: 5rem
    

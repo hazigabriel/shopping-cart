@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/navbar/navbar.js';
-import Homepage from './components/homepage/homepage';
+import Homepage from './components/homepage/homepage.js';
 function App() {
   return (
     <div className="App">
