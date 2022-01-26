@@ -21,7 +21,7 @@ function Navbar( ) {
                         Shop
                     </Link>
                     <Link to="checkout">
-                        Checkout
+                        Cart(0)
                     </Link>
                 </div>
 
