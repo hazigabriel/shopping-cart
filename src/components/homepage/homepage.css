@@ -2,7 +2,7 @@
     display: block;
     position: relative;
     width:100%;
-    height: calc(100vh - 5rem);
+    height: calc(100vh - 5rem - 2px); /*5rem for the navbar height,2px for its border*/
     overflow: hidden;
 }
 video {
@@ -13,7 +13,7 @@ video {
     min-height: 100%;
     z-index: -1;
     background-size: cover;
-    overflow: hidden !important;
+    overflow: hidden important;
  
 }
 .videoWrapper h1 {

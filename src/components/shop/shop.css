@@ -42,9 +42,90 @@
     transform: scale(0);
     transition: 0.2s ease;
 }
+.radioButton:hover + .radioButtonDisplayed::after {
+    transform: scale(0.6)
+}
 .radioButton:checked + .radioButtonDisplayed:after {
     transform: scale(1)
 }
+ 
 .shopContent {
-    background-color: blue;
+    margin-top: 2rem;
+    display: grid;
+    width:100%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:  1fr;
+    gap:2rem;
+    justify-items   : center;
 }
+.productWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    box-sizing: border-box;
+    width:20rem;
+    height: 24rem;
+    border:2px solid #e6e6e6;
+}
+ 
+.productImageWrapper {
+    height: 18rem;
+    width: 18rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border-bottom: 2px solid #e6e6e6;
+    box-sizing: border-box;
+    cursor: pointer;
+ }
+.productImageWrapper img {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+}
+.productImageWrapper img:hover {
+    transform: scale(1.05); 
+ 
+}
+.productInfo {
+    margin-top: 0.5rem;
+    display: grid;
+    grid-template-columns: 7fr 1fr;
+    gap: 0.5rem;
+    padding: 0 1rem;
+    color: #313131
+    
+}
+.productInfo h3:nth-child(1) {
+    font-size: 1.1em;
+    font-weight: 400;
+   
+}
+.productInfo h3:nth-child(2) {
+    align-self:center;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: #009879
+ }
+ .productButtons {
+    align-self: flex-end;
+    display: flex;
+    bottom:0
+    
+ }
+ .productButtons div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 3rem;
+    box-sizing: border-box;
+    color: #a5a5a5;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+ .productButtons div:hover {
+    background-color: #f0f0f0;
+    color: #009879
+ }
