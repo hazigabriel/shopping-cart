@@ -62,7 +62,7 @@ const replicas =  [
                         </p>
                     </div>,
         image: [ife1, ife2],
-        price: 1.600,
+        price: 1600,
         dimensions: "H35 x W13.5 x L18cm m",
         weight: "1.35kg ",
         pages: false,

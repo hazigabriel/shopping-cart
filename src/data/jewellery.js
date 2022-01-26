@@ -58,7 +58,7 @@ const jewellery =  [
                             Discovered in the 3rd century BC by Greek philosopher Theophrastus, agate was first found along the Achates River which gave the stone its name. Agate exists in a variety of colours and patterns, including the banded agate used for this striking necklace.
                         </p>
                     </div>,
-        image: [ ],
+        image: [persianNecklance],
         price: 200.00,
         dimensions: "Length: 150cm ",
         weight: "0.04Kg",
