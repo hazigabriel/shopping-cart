@@ -1,0 +1,126 @@
+ .cartWrapper {
+   min-height: calc(100vh - 5rem - 2px); /*5rem for the navbar height,2px for its border*/
+   padding-top: 2rem;
+   display: grid;
+   gap: 1rem;
+   grid-template-columns: 4fr 1fr;
+ }
+
+ .cartItem {
+   display: grid;
+   grid-template-columns: 1fr 4fr 2fr 1fr 1fr;
+   align-items: center;
+   background-color: white;
+   border: 2px solid #9e8c8c;
+   margin: 0 0 1rem 0;
+     
+ }
+ .itemsTotal {
+   display: flex;
+    justify-content: space-between;
+
+ }
+ .itemsTotal h2 {
+   margin: 1rem
+ }
+ .cartItem img {
+   height: 4rem;
+   width: 4rem
+ }
+ .productQuantity {
+   align-self: right
+ }
+ .productRemove {
+   
+   display: flex;
+   justify-content: center;
+ }
+ .productQuantity {
+    display: flex;
+    align-items: center;
+   
+ }
+ .productQuantity h3 {
+    border: 3px solid #313131;
+    padding: 0.2rem 0.5em;
+    margin: 0.5rem
+ }
+ .productQuantity h2 {
+    cursor: pointer;
+    font-size: 2em;
+    user-select: none;
+ }
+ .productQuantity {
+
+ }
+ .productRemove svg {
+   text-align: center;
+   transform: scale(1.2);
+   color: #313131;
+   transition: 0.2s ease;
+   cursor: pointer;
+ }
+ .productRemove svg:hover {
+   transform: scale(1.4);
+   color: crimson
+
+ }
+
+.promoCodeWrapper {
+   background-color: #e2e2e2;
+   height: 11rem;
+   width:15rem;
+   display: flex;
+   flex-direction: column;
+   color:#313131
+}
+.promoCodeWrapper h3 {
+   margin: 1rem;
+   
+}
+.promoCodeWrapper input {
+   font-size: 1.5em;
+   height: 2.5rem;
+   margin: 0 1rem;
+   font-weight: bold;
+   border:none;
+   color:#313131;
+   padding: 0.5rem
+   
+}
+.submitPromoCode {
+   font-size: 1.3em;
+   font-weight: bold;
+   text-align: center;
+   background-color: #cccccc;
+   border: 2px solid #aaaaaa;
+   padding: 0.5rem;
+   vertical-align: middle;
+   margin: 0 1rem;
+   margin-top: 1rem;
+   cursor: pointer;
+   transition: 0.3s;
+}
+.submitPromoCode:hover {
+   background-color: #aaaaaa;
+ }
+.promoCodeWrapper input:focus {
+   outline: none ;
+}
+.validPromoCode, .invalidPromoCode {
+   display: absolute;
+   text-align: right;
+   font-size: 1.5em;
+   transition: 0.2s ease;
+   transform: scale(0)
+}
+.validPromoCode {
+   margin-top: 3rem;
+   color: #009879;
+   transform: scale(0);
+}
+.invalidPromoCode {
+   margin-top: -1.5rem;
+   color: crimson;
+   transform: scale(0);
+ }
