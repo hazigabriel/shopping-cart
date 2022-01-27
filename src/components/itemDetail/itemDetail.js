@@ -16,7 +16,7 @@ function ItemDetail() {
                             <h2>{allProducts[1].name}</h2>
                             {allProducts[0].description}
                             <div className="itemDetails">
-                                <div className="itemDimenstions">
+                                <div className="itemDimensions">
                                     <h3>Dimensions</h3>
                                     <p>{allProducts[1].dimensions}</p>
                                 </div>

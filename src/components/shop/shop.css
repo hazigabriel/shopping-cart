@@ -22,6 +22,7 @@
 .radioButton {
     display: none;
 }
+
 .radioButtonDisplayed {   
     width: 1.25em;
     height: 1.25em;
@@ -68,7 +69,9 @@
     height: 24rem;
     border:2px solid #e6e6e6;
 }
- 
+.productWrapper a {
+    text-decoration: none;
+ }
 .productImageWrapper {
     height: 18rem;
     width: 18rem;
