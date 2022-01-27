@@ -1,0 +1,115 @@
+.itemDetailWrapper {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    gap: 1rem
+}
+.itemLeftColumn {
+    margin-top: 2rem;;
+ }
+.itemRightColumn {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: right;
+}
+.imageCarousel {
+    background-color: white;
+    width:100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 16fr 1fr;
+ }
+.imageCarousel img {
+    height: 30rem;
+    width: 30rem;
+    justify-self: center;
+}
+.imageCarousel p {
+    align-self: center;
+    font-size: 3em;
+    color: #dfdfdf;
+    cursor: pointer;
+    transition: 0.2s ease;
+    user-select: none;
+}
+.imageCarousel p:hover {
+    color: #c9c9c9;
+    transform: scale(1.2)
+}
+.nextImage {
+    justify-self: left
+}
+.prevImage {
+    justify-self: right
+
+}
+.itemAddWrapper {
+    align-self: right;
+    background-color: white; 
+    border: 2px solid #e2e2e2;
+    height: 12rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color:#313131;
+    padding: 2rem 1rem;
+}
+.itemAddWrapper h1 {
+    font-size: 2em;
+}
+.itemQuantityPicker {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem 
+}
+.itemQuantityPicker input {
+    width:4rem;
+    font-size:1.5em;
+}
+.itemQuantityPicker input:focus {
+    outline: none;
+}
+.addItemButton {
+    background-color: red;
+}
+.addItemButton {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+    background-color: #313131;
+    color:white;
+    padding: 1rem;
+    vertical-align: middle;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+ .addItemButton:hover {
+    background-color: #1b1b1b;
+    box-shadow: 0 0  5px rgb(0, 0, 0);
+}
+.addItemButton p {
+    user-select: none;
+}
+.itemInformation {
+    margin-top: 2rem;
+ }
+.itemInformation h2 {
+    margin: 1rem 0 2rem 0;
+}
+.itemInformation p {
+    font-size: 1.2em;
+    margin-bottom: 1rem;
+}
+
+.itemDetails {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.itemDetails div h3 {
+    margin-bottom: 0.5rem;
+}
+.itemDetails div {
+    margin-bottom: 1rem;
+}

@@ -4,6 +4,7 @@ import Navbar from './components/navbar/navbar.js';
 import Homepage from './components/homepage/homepage.js';
 import Shop from './components/shop/shop.js'
 import Checkout from "./components/cart/cart.js"
+import ItemDetail from "./components/itemDetail/itemDetail.js"
 function App() {
   return (
     <div className="App">
@@ -12,6 +13,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/shop" element={<Shop />}></Route>
+            <Route path="shop/:id" element={<ItemDetail />}></Route>
             <Route path="/checkout" element={<Checkout />}></Route>
           </Routes>
         

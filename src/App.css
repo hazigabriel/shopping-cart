@@ -15,7 +15,7 @@ font-family: 'Source Serif Pro', serif;
 
 .gridContainer {
   display: grid;
-  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-columns: 12rem 1fr 12rem;
 }
 .gridItem {
   grid-column: 2/ 3;
