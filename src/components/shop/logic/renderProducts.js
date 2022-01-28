@@ -32,7 +32,7 @@ function Products(props) {
                         <h3>€{product.price}</h3>
                     </div>
                     <div className="productButtons">
-                        <div className="addProduct">
+                        <div className="addProduct" onClick={props.addItem}>
                             Add to cart
                         </div>
                         <Link to={`/shop/${product.id }`}>

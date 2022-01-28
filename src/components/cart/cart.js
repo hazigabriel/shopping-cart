@@ -1,14 +1,16 @@
 import "./cart.css"
 import allProducts from "../../data/allProducts"
 import { FaTrashAlt } from 'react-icons/fa';
+import CartItems from "./logic/renderCartItems"
 
-
-function Checkout() {
+function Checkout(props) {
     return (
         <div className="gridContainer">
             <div className="gridItem">
+                
                 <section className="cartWrapper">
-                    <div className="cartItems">
+                    <CartItems cartItems={props.cartItems} /> 
+                    {/* <div className="cartItems">
                         <div className="cartItem">
                             <img src={allProducts[12].image[0]}></img>
                             <p>{allProducts[12].name}</p>
@@ -53,7 +55,7 @@ function Checkout() {
                             <h2>Total:</h2>
                             <h2>$342.12312</h2>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="promoCodeWrapper">
                         <h3>Enter promo code</h3> 

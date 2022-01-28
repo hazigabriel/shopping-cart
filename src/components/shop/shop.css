@@ -51,13 +51,13 @@
 }
  
 .shopContent {
-    margin-top: 2rem;
+    margin: 2rem 0 4rem 0;
     display: grid;
     width:100%;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:  1fr;
     gap:2rem;
-    justify-items   : center;
+    justify-items: center;
 }
 .productWrapper {
     display: flex;
@@ -66,9 +66,10 @@
     background-color: white;
     box-sizing: border-box;
     width:20rem;
-    height: 24rem;
+    min-height: 24rem;
     border:2px solid #e6e6e6;
 }
+
 .productWrapper a {
     text-decoration: none;
  }

@@ -3,15 +3,12 @@ import React, {useState, useEffect} from 'react';
 import allProducts from "../../data/allProducts"
 import {Link } from "react-router-dom"
 import Products from "./logic/renderProducts" 
-function Shop() {
+
+
+function Shop(props) {
+
     const [category, setCategory] = useState('All Items')
-    const [displayedProducts, setDisplayedProducts] = useState(category)
-
-
-    // useEffect(() => {
-    //     console.log("Your currently category is " + category)
-    // }, [category])
-
+    const [cartItems, setCartItems] = useState(props.cartItems);
 
     function choseCategory(e) {
         e.preventDefault()
@@ -20,7 +17,30 @@ function Shop() {
          
     }
 
-    
+    function addItem(e) {
+        let currentId = e.target.parentElement.parentElement.id;
+        let storedItems = props.cartItems;
+        //console.log(currentId)
+        let itemExists;
+ 
+        
+        for(let i = 0; i < storedItems.length; i++) {
+            if(storedItems[i].itemId == currentId) {
+                itemExists = i
+            }
+        }
+        
+        if(itemExists) {
+            storedItems[itemExists].quantity = storedItems[itemExists].quantity + 1;    
+     
+        } else {
+            storedItems.push({itemId: currentId, quantity: 1})
+             
+        }
+        
+        props.setCartItems(storedItems)
+
+     }
 
 
 
@@ -62,111 +82,9 @@ function Shop() {
                             </div>
                         </form>
                     </div>
-                    <Products products={category} />     
+                    <Products products={category} addItem={addItem} />     
 
-                    {/* <div className="shopContent">
-                    <Products products={category}/>     
-                        <div className="productWrapper">
-                            <Link to="/shop/:id">
-                                <div className="productImageWrapper">
-                                    <img src={allProducts[12].image[0]}></img>
-                                    
-                                </div>
-                            </Link>
-                            <div className="productInfo">
-                                <h3>{allProducts[12].name}</h3> 
-                                <h3>€{allProducts[0].price}</h3>
-                            </div>
-                            <div className="productButtons">
-                                <div className="addProduct">
-                                    Add to cart
-                                </div>
-                                <Link to="/shop/:id">
-                                    <div className="viewProductDetails">
-                                        View details
-                                    </div>
-                                </Link>
-                            </div> 
-                        </div>
-                        <div className="productWrapper">
-                            
-                            <div className="productImageWrapper">
-                                <img src={allProducts[15].image[0]}></img>
-                                
-                            </div>
-                            <div className="productInfo">
-                                <h3>{allProducts[15].name}</h3> 
-                                <h3>€{allProducts[15].price}</h3>
-                            </div>
-                            <div className="productButtons">
-                                <div className="addProduct">
-                                    Add to cart
-                                </div>
-                                <div className="viewProductDetails">
-                                    View details
-                                </div>
-                            </div> 
-                        </div>
-                        <div className="productWrapper">
-                            
-                            <div className="productImageWrapper">
-                                <img src={allProducts[2].image[0]}></img>
-                                
-                            </div>
-                            <div className="productInfo">
-                                <h3>{allProducts[2].name}</h3> 
-                                <h3>€{allProducts[2].price}</h3>
-                            </div>
-                            <div className="productButtons">
-                                <div className="addProduct">
-                                    Add to cart
-                                </div>
-                                <div className="viewProductDetails">
-                                    View details
-                                </div>
-                            </div> 
-                        </div>
-                        <div className="productWrapper">
-                            
-                            <div className="productImageWrapper">
-                                <img src={allProducts[7].image[0]}></img>
-                                
-                            </div>
-                            <div className="productInfo">
-                                <h3>{allProducts[7].name}</h3> 
-                                <h3>€{allProducts[7].price}</h3>
-                            </div>
-                            <div className="productButtons">
-                                <div className="addProduct">
-                                    Add to cart
-                                </div>
-                                <div className="viewProductDetails">
-                                    View details
-                                </div>
-                            </div> 
-                        </div>
-                        <div className="productWrapper">
-                            
-                            <div className="productImageWrapper">
-                                <img src={allProducts[4].image[0]}></img>
-                                
-                            </div>
-                            <div className="productInfo">
-                                <h3>{allProducts[4].name}</h3> 
-                                <h3>€{allProducts[4].price}</h3>
-                            </div>
-                            <div className="productButtons">
-                                <div className="addProduct">
-                                    Add to cart
-                                </div>
-                                <div className="viewProductDetails">
-                                    View details
-                                </div>
-                            </div> 
-                        </div>
-
-                      
-                    </div> */}
+               
                 </section>
             
             </div>
