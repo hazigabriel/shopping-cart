@@ -24,6 +24,7 @@ function App() {
             } 
         }
     }
+    console.log("s-a schimbat")
     setItemsToBeRendered(tempItems)
     // console.log(itemsToBeRendered)
   }, [totalCartItems])
@@ -43,7 +44,7 @@ function App() {
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/shop" element={<Shop cartItems={cartItems} setCartItems={setCartItems} updateTotalCartItems={updateTotalCartItems}/>}></Route>
             <Route path="shop/:id" element={<ItemDetail />}></Route>
-            <Route path="/checkout" element={<Checkout cartItems={cartItems} itemsToBeRendered={itemsToBeRendered} setItemsToBeRendered={setItemsToBeRendered} setTotalCartItems={setTotalCartItems}/>}></Route>
+            <Route path="/checkout" element={<Checkout cartItems={cartItems} setCartItems={setCartItems} itemsToBeRendered={itemsToBeRendered} setItemsToBeRendered={setItemsToBeRendered} totalCartItems={totalCartItems} setTotalCartItems={setTotalCartItems}/>}></Route>
           </Routes>
         
       </BrowserRouter>

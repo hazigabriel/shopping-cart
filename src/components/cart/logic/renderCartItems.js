@@ -22,55 +22,54 @@ function CartItems(props) {
             total = total + (items[i][0].price * items[i][1])
         }
 
+        
         setTotalDueAmount(total)
+        
     }
-
+    function getCartQuantity(){
+        let newTotalQuantity = itemsToBeRendered.map(item => (
+            item[1]
+        ))
+        console.log(newTotalQuantity)
+        props.setTotalCartItems(newTotalQuantity.reduce((partialSum, a) => partialSum + a, 0))
+    }
     function decreaseQuantity(e){
         let currentId = e.target.parentElement.parentElement.id;
-        let tempItems = itemsToBeRendered;
+        let tempItems = props.cartItems;
 
-        for(let i = 0; i < itemsToBeRendered.length; i++) {
-            if(tempItems[i][0].id == currentId) {
-                if(tempItems[i][1] > 1) {
-                    tempItems[i][1] -= 1;
-                    document.querySelector(`#${tempItems[i][0].id}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i][1]
-                     
 
-                } else {
-                     
-                }
-                 
+
+        for(let i = 1; i < tempItems.length; i++) {
+            if(tempItems[i].itemId == currentId) {
+                tempItems[i].quantity -= 1;
+                document.querySelector(`#${tempItems[i].itemId}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i].quantity
             }
             
         }
-        let newTotalQuantity = tempItems.map(item => (
-            item[1]
-        ))
-        
         getTotalDue()
-        props.setItemsToBeRendered(tempItems)
+        //console.log(tempItems)
+        props.setCartItems(tempItems)
+        console.log(tempItems)
         
-         
     }
     function increaseQuantity(e){
         let currentId = e.target.parentElement.parentElement.id;
-        let tempItems = itemsToBeRendered;
+        let tempItems = props.cartItems;
 
-        for(let i = 0; i < itemsToBeRendered.length; i++) {
-            if(tempItems[i][0].id == currentId) {
-                tempItems[i][1] += 1;
-                document.querySelector(`#${tempItems[i][0].id}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i][1]
+
+
+        for(let i = 1; i < tempItems.length; i++) {
+            if(tempItems[i].itemId == currentId) {
+                tempItems[i].quantity += 1;
+                document.querySelector(`#${tempItems[i].itemId}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i].quantity
             }
             
         }
-
-        let newTotalQuantity = tempItems.map(item => (
-            item[1]
-        ))
-        
         getTotalDue()
-        props.setItemsToBeRendered(tempItems)
-
+        //console.log(tempItems)
+        props.setCartItems(tempItems)
+        console.log(tempItems)
+        
     }
     
     function conditionalRender() {
