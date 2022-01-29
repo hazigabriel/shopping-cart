@@ -9,36 +9,42 @@ function Shop(props) {
 
     const [category, setCategory] = useState('All Items')
     const [cartItems, setCartItems] = useState(props.cartItems);
-
+    
+    useEffect(() => {
+        // alert(" s-a updatat")
+      }, [props.cartItems])
+    
     function choseCategory(e) {
         e.preventDefault()
         e.target.parentElement.querySelector(".radioButton").checked = true
         setCategory(e.target.parentElement.querySelector("p").innerHTML)
-         
+        
     }
+    
 
     function addItem(e) {
         let currentId = e.target.parentElement.parentElement.id;
         let storedItems = props.cartItems;
         //console.log(currentId)
-        let itemExists;
+        let clickIndex;
  
         
         for(let i = 0; i < storedItems.length; i++) {
             if(storedItems[i].itemId == currentId) {
-                itemExists = i
+                clickIndex = i
             }
         }
         
-        if(itemExists) {
-            storedItems[itemExists].quantity = storedItems[itemExists].quantity + 1;    
-     
+        if(clickIndex) {
+            storedItems[clickIndex].quantity = storedItems[clickIndex].quantity + 1;    
         } else {
             storedItems.push({itemId: currentId, quantity: 1})
              
         }
         
+        props.updateTotalCartItems()
         props.setCartItems(storedItems)
+        // console.log(props.cartItems)
 
      }
 

@@ -1,47 +1,105 @@
 import allProducts from "../../../data/allProducts"
 import React, {useState, useEffect} from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import {Link } from "react-router-dom"
 
 function CartItems(props) {
-    const [itemsToBeRendered, setItemsToBeRendered] = useState(getCartItems());
+    const [itemsToBeRendered, setItemsToBeRendered] = useState(props.itemsToBeRendered);
+    const [totalDueAmount, setTotalDueAmount] = useState(0)
+    
 
-    function getCartItems(){
+    //itemsToBeRendered={itemsToBeRendered} setItemsToBeRendered={setItemsToBeRendered}
+    useEffect(()=>{
+        getTotalDue()
+        //when switching to the cart page the default total due is 0, we use the useEffect hook to get the total once the page rerenders
+    }, [])
 
-        let tempItems = [];
-        for(let i = 1; i < props.cartItems.length; i++) {
-            for(let e = 0; e < allProducts.length; e++) {
-                if(props.cartItems[i].itemId == allProducts[e].id) {
-                    tempItems.push([allProducts[e], props.cartItems[i].quantity]);
-                } 
-            }
+    function getTotalDue(){
+        const items = props.itemsToBeRendered;
+        let total = 0;
+        
+        for(let i = 0; i < itemsToBeRendered.length; i++) {
+            total = total + (items[i][0].price * items[i][1])
         }
-        return tempItems
+
+        setTotalDueAmount(total)
     }
-    function isEmpty() {
-        //console.log(itemsToBeRendered)
+
+    function decreaseQuantity(e){
+        let currentId = e.target.parentElement.parentElement.id;
+        let tempItems = itemsToBeRendered;
+
+        for(let i = 0; i < itemsToBeRendered.length; i++) {
+            if(tempItems[i][0].id == currentId) {
+                if(tempItems[i][1] > 1) {
+                    tempItems[i][1] -= 1;
+                    document.querySelector(`#${tempItems[i][0].id}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i][1]
+                     
+
+                } else {
+                     
+                }
+                 
+            }
+            
+        }
+        let newTotalQuantity = tempItems.map(item => (
+            item[1]
+        ))
+        
+        getTotalDue()
+        props.setItemsToBeRendered(tempItems)
+        
+         
+    }
+    function increaseQuantity(e){
+        let currentId = e.target.parentElement.parentElement.id;
+        let tempItems = itemsToBeRendered;
+
+        for(let i = 0; i < itemsToBeRendered.length; i++) {
+            if(tempItems[i][0].id == currentId) {
+                tempItems[i][1] += 1;
+                document.querySelector(`#${tempItems[i][0].id}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i][1]
+            }
+            
+        }
+
+        let newTotalQuantity = tempItems.map(item => (
+            item[1]
+        ))
+        
+        getTotalDue()
+        props.setItemsToBeRendered(tempItems)
+
+    }
+    
+    function conditionalRender() {
+ 
         if(props.cartItems.length == 1) {
             return (
                 <h2>No products added yet</h2>
             )
-            
         } else {
-            getCartItems()
-           // console.log(getCartItems)
+            
         }
     }
  
     
     return (
         <div className="cartItems">
-            {isEmpty()}
+            {conditionalRender()}
             {itemsToBeRendered.map(item => (
-                <div key={item[0].id}className="cartItem">
-                    <img src={item[0].image[0]}></img>
-                    <p>{item[0].name}</p>
+                <div key={item[0].id} id={item[0].id} className="cartItem"> 
+                    <Link to={`/shop/${item[0].id}`}>
+                        <img src={item[0].image[0]}></img>
+                    </Link>
+                    <Link to={`/shop/${item[0].id}`}>
+                        <p>{item[0].name}</p>
+                    </Link>
                     <div className="productQuantity">
-                        <h2>-</h2>
-                        <h3>{item[1]}</h3>
-                        <h2>+</h2>
+                        <h2 onClick={decreaseQuantity}>-</h2>
+                        <h3 className>{item[1]}</h3>
+                        <h2 onClick={increaseQuantity}>+</h2>
                     </div>
                     <div className="productPrice">
                         <p>€{item[0].price}</p>
@@ -50,21 +108,11 @@ function CartItems(props) {
                         <FaTrashAlt />
                     </div>
                 </div>
-               
-                        // <div className="cartItem">
-                        //     <img src={allProducts[12].image[0]}></img>
-                        //     <p>{allProducts[12].name}</p>
-                        //     <div className="productQuantity">
-                        //         <h2>-</h2>
-                        //         <h3>9</h3>
-                        //         <h2>+</h2>
-                        //     </div>
-                        //     <div className="productPrice">
-                        //         <p>$23</p>
-                        //     </div>
-                        //     <div className="productRemove"><FaTrashAlt /></div>
-                        // </div>
             ))}
+            <div className="itemsTotal">
+                <h2>Total:</h2>
+                <h2>€{totalDueAmount}</h2>
+            </div>
         </div>
     )
 }

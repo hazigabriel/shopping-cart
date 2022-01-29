@@ -9,7 +9,7 @@ function Checkout(props) {
             <div className="gridItem">
                 
                 <section className="cartWrapper">
-                    <CartItems cartItems={props.cartItems} /> 
+                    <CartItems cartItems={props.cartItems} itemsToBeRendered={props.itemsToBeRendered} setItemsToBeRendered={props.setItemsToBeRendered} setTotalCartItems={props.setTotalCartItems}/> 
                     {/* <div className="cartItems">
                         <div className="cartItem">
                             <img src={allProducts[12].image[0]}></img>

@@ -2,7 +2,7 @@
    min-height: calc(100vh - 5rem - 2px); /*5rem for the navbar height,2px for its border*/
    padding-top: 2rem;
    display: grid;
-   gap: 1rem;
+
    grid-template-columns: 4fr 1fr;
  }
 
@@ -12,8 +12,13 @@
    align-items: center;
    background-color: white;
    border: 2px solid #9e8c8c;
+   
    margin: 0 0 1rem 0;
      
+ }
+ .cartItem a {
+  text-decoration: none;
+  color: #313131
  }
  .itemsTotal {
    display: flex;
@@ -23,12 +28,13 @@
  .itemsTotal h2 {
    margin: 1rem
  }
- .cartItem img {
+ .cartItem a img {
    height: 4rem;
    width: 4rem
  }
  .productQuantity {
-   align-self: right
+   align-self: right;
+   margin-left:1rem
  }
  .productRemove {
    

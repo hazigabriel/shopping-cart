@@ -1,9 +1,11 @@
 import {Link } from "react-router-dom"
+import { useState } from "react";
 import "./navbar.css"
-function Navbar( ) {
-
-
-    return (
+function Navbar(props) {
+     
+ 
+    
+     return (
         <div className="gridContainer navbarGrid"> {/*added navbarGrid class so that we can set up a bg color for the whole width */}
              <section className="navbar gridItem">
                 <div className="logoWrapper">
@@ -21,7 +23,7 @@ function Navbar( ) {
                         Shop
                     </Link>
                     <Link to="checkout">
-                        Cart(0)
+                        Cart({props.totalCartItems})
                     </Link>
                 </div>
 
