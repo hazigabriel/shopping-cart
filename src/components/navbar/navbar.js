@@ -22,7 +22,7 @@ function Navbar(props) {
                     <Link to="/shop">
                         Shop
                     </Link>
-                    <Link to="checkout">
+                    <Link to="/cart">
                         Cart({props.totalCartItems})
                     </Link>
                 </div>
