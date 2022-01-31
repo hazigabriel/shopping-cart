@@ -1,10 +1,13 @@
 import "./itemDetail.css"
 import allProducts from "../../data/allProducts"
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function ItemDetail(props) {
-    const [carouselImgIndex, setCarouselImgIndex] = useState(0)
-
+    const [carouselImgIndex, setCarouselImgIndex] = useState(0);
+    useEffect(() => {
+        setCarouselImgIndex(0)
+    }, [])
+    
     function addProductToCart() {
         let productQuantity = parseInt(document.querySelector(".productQuantity").value);
         props.addToCart(props.individualProduct, productQuantity)
@@ -59,20 +62,25 @@ function ItemDetail(props) {
     function handleCarousel(e) {
         let carouselImages = props.individualProduct.image;
         let imageSource = e.target.parentElement.querySelector("img");
- 
-         if(e.target.innerHTML == "&lt;") { //this is > 
-            if(carouselImages[carouselImgIndex + 1]) {
-                console.log()
-                setCarouselImgIndex(carouselImgIndex + 1)
-                imageSource.src = [carouselImages[carouselImgIndex]]
+        let tempIndex = carouselImgIndex;
+      
+         if(e.target.innerHTML == "&gt;") { //this is > 
+            if(carouselImages[tempIndex + 1]) {
+               
+                tempIndex = tempIndex + 1;
+                imageSource.src = [carouselImages[tempIndex]]
                
             } 
         } else {
-            if(carouselImages[carouselImgIndex - 1]) {
-                setCarouselImgIndex(carouselImgIndex - 1)
-                imageSource.src = [carouselImages[carouselImgIndex]]
+            if(carouselImages[tempIndex - 1]) {
+       
+                tempIndex = tempIndex - 1;
+                imageSource.src = [carouselImages[tempIndex]]
+          
             }
         }
+
+        setCarouselImgIndex(tempIndex)
          // >
         //&lt;
     }

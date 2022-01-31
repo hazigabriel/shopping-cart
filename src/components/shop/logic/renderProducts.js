@@ -19,7 +19,6 @@ function Products(props) {
             }
         })
         // console.log(temp)
-        console.log(props.individualProduct)
         props.setIndividualProduct(temp)
     }
 
