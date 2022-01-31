@@ -4,8 +4,8 @@ import { FaTrashAlt } from 'react-icons/fa';
 import {Link } from "react-router-dom"
 
 function CartItems(props) {
-  
-   
+    
+    
     function getTotalDue(){
         // const items = props.itemsToBeRendered;
         // let total = 0;
@@ -20,30 +20,22 @@ function CartItems(props) {
     }
      
     function decreaseQuantity(e){
-        // let currentId = e.target.parentElement.parentElement.id;
-        // let tempItems = props.cartItems;
-
-
-
-        // for(let i = 1; i < tempItems.length; i++) {
-        //     if(tempItems[i].itemId == currentId) {
-        //         tempItems[i].quantity -= 1;
-        //         document.querySelector(`#${tempItems[i].itemId}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i].quantity
-        //     }
-            
-        // }
-        // getTotalDue()
-        
-        // //console.log(tempItems)
-        
-        // props.setCartItems(tempItems)
-        // console.log(tempItems)
-        
-    }
-    let increaseQuantity = async (e) =>  {
-    
         let currentId = e.target.parentElement.parentElement.id;
-        // let tempItems = props.cartItems;
+        let newCartProducts = props.cartProducts
+        let currentProductIndex;
+
+        props.cartProducts.find((item, index)=> {
+            currentProductIndex = index
+            return item[0].id === currentId
+        })
+         
+        newCartProducts[currentProductIndex][1] -= 1
+ 
+        props.setCartProducts(newCartProducts)
+        console.log(props.cartProducts)
+    }
+    function increaseQuantity(e) {
+        let currentId = e.target.parentElement.parentElement.id;
         let newCartProducts = props.cartProducts
         let currentProductIndex;
 
@@ -53,9 +45,11 @@ function CartItems(props) {
         })
          
         newCartProducts[currentProductIndex][1] += 1
-        
-        await props.setCartProducts(newCartProducts)
 
+        // setTotalQuantity(previousQuantity => previousQuantity + 1);.
+        props.setCartProducts(newCartProducts)
+ 
+ 
         // for(let i = 1; i < tempItems.length; i++) {
         //     if(tempItems[i].itemId == currentId) {
         //         tempItems[i].quantity += 1;

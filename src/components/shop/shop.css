@@ -128,8 +128,13 @@
     color: #a5a5a5;
     transition: 0.3s;
     cursor: pointer;
+    user-select: none;
   }
  .productButtons div:hover {
     background-color: #f0f0f0;
     color: #009879
+ }
+ .productButtons div:active {
+    color: #a5a5a5;
+    background-color: #5a5a5a;
  }

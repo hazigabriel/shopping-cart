@@ -3,10 +3,27 @@ import allProducts from "../../../data/allProducts"
 import books from "../../../data/books"
 import jewellery from "../../../data/jewellery"
 import replicas from "../../../data/replicas"
+import { useState } from "react"
 
 function Products(props) {
     const {products } = props 
-     
+    const [individualProduct, setIndividualProduct] = useState() 
+    const temp = individualProduct;
+
+    function updateDisplayedProduct(e) {
+        const elementIndex = e.target.parentElement.parentElement.parentElement.id
+        let temp;
+        allProducts.forEach((item) =>{ 
+            if(item.id == elementIndex) {
+                temp = item
+            }
+        })
+        // console.log(temp)
+        console.log(props.individualProduct)
+        props.setIndividualProduct(temp)
+    }
+
+    
     let productsToBeRendered;
     if(products == "All Items") {
         productsToBeRendered = allProducts;
@@ -22,7 +39,7 @@ function Products(props) {
         <div className="shopContent">
             {productsToBeRendered.map(product => (
                 <div className="productWrapper" key={product.id} id={product.id}>
-                    <Link to={`/shop/${product.id }`}>
+                    <Link onClick={updateDisplayedProduct} to={`/shop/${product.id }`}>
                         <div className="productImageWrapper">
                             <img src={product.image[0]}></img>
                         </div>
@@ -35,7 +52,7 @@ function Products(props) {
                         <div className="addProduct" onClick={props.addItem}>
                             Add to cart
                         </div>
-                        <Link to={`/shop/${product.id }`}>
+                        <Link onClick={updateDisplayedProduct} to={`/shop/${product.id }`}>
                             <div className="viewProductDetails">
                                 View details
                             </div>

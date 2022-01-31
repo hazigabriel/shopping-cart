@@ -62,9 +62,38 @@
     align-items: center;
     gap: 1rem 
 }
+.itemQuantityPicker div {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem
+}
+ 
+.itemQuantityPicker div h2 {
+    align-self: center;
+    justify-self: center;
+    font-size: 2em;
+    cursor: pointer;
+    width:1.5rem;
+    text-align: center;
+    user-select: none;
+    transition: 0.2s ease;
+}
+.itemQuantityPicker div h2:hover {
+    color: #009879
+}
+.itemQuantityPicker div h2:active {
+    transform: scale(1.3)
+}
 .itemQuantityPicker input {
-    width:4rem;
-    font-size:1.5em;
+    width:2rem;
+    font-size:1.5em;     
+    margin: 0 auto;
+}
+.itemQuantityPicker input::-webkit-outer-spin-button,
+.itemQuantityPicker input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
 }
 .itemQuantityPicker input:focus {
     outline: none;
@@ -87,6 +116,9 @@
  .addItemButton:hover {
     background-color: #1b1b1b;
     box-shadow: 0 0  5px rgb(0, 0, 0);
+}
+.addItemButton:active {
+    color: #009879
 }
 .addItemButton p {
     user-select: none;

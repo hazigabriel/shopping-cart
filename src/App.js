@@ -11,8 +11,9 @@ import allProducts from './data/allProducts';
 function App() {
   
   const [cartProducts, setCartProducts] = useState([])
- 
-  let addToCart = async (product, quantity) => {
+  const [individualProduct, setIndividualProduct] = useState()
+
+    let addToCart = async (product, quantity) => {
     let newCartProducts = cartProducts
     let currentProductIndex;
 
@@ -30,7 +31,7 @@ function App() {
         newCartProducts.push([product, quantity])
       }
        
-      setCartProducts(newCartProducts)
+      await setCartProducts(newCartProducts)
       console.log(cartProducts)
     }
   }
@@ -41,9 +42,22 @@ function App() {
         <Navbar   />
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
-            <Route path="/shop" element={<Shop cartProducts={cartProducts} setCartProducts={setCartProducts} addToCart={addToCart} />}></Route>
-            <Route path="shop/:id" element={<ItemDetail />}></Route>
-            <Route path="/cart" element={<Cart cartProducts={cartProducts} setCartProduct={setCartProducts} /> }></Route>
+            <Route path="/shop" element={
+              <Shop 
+                cartProducts={cartProducts} 
+                setCartProducts={setCartProducts} 
+                addToCart={addToCart} 
+                individualProduct={individualProduct}
+                setIndividualProduct={setIndividualProduct}
+              />}>
+            </Route>
+            <Route path="shop/:id" element={
+              <ItemDetail  
+                individualProduct={individualProduct}
+                addToCart={addToCart} 
+              />}>
+            </Route>
+            <Route path="/cart" element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts} /> }></Route>
           </Routes>
         
       </BrowserRouter>

@@ -70,9 +70,14 @@ function Shop(props) {
                             </div>
                         </form>
                     </div>
-                    <Products products={category} addItem={addItem} />     
+                    <Products 
+                        products={category} 
+                        addItem={addItem}
+                        individualProduct={props.individualProduct}
+                        setIndividualProduct={props.setIndividualProduct} 
+                    />     
 
-               
+      
                 </section>
             
             </div>
