@@ -26,6 +26,7 @@ function Shop(props) {
         allProducts.forEach((item) =>{ 
             if(item.id == currentId) {
                 props.addToCart(item, 1)
+                props.computeCartQuantity()
             }
         })
      }

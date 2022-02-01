@@ -12,11 +12,12 @@ function App() {
   
   const [cartProducts, setCartProducts] = useState([])
   const [individualProduct, setIndividualProduct] = useState()
-
-    let addToCart = async (product, quantity) => {
+  const [totalCartItems, setTotalCartItems] = useState(0)
+  
+  let addToCart = async (product, quantity) => {
     let newCartProducts = cartProducts
     let currentProductIndex;
-
+      
     if(cartProducts.length == 0 ) {
       cartProducts.push([product, quantity])
     } else {
@@ -30,16 +31,28 @@ function App() {
       } else {
         newCartProducts.push([product, quantity])
       }
-       
+      
       await setCartProducts(newCartProducts)
-      console.log(cartProducts)
     }
-  }
+}
+
+function computeCartQuantity(){
+  let temp = cartProducts;
+  let total = 0;
+  temp.forEach(item => {
+    total += item[1];
+  
+  })
+  setTotalCartItems(total)
+
+}
 
   return (
     <div className="App">
      <BrowserRouter>
-        <Navbar   />
+        <Navbar 
+          totalCartItems={totalCartItems}  
+        />
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
             <Route path="/shop" element={
@@ -49,15 +62,24 @@ function App() {
                 addToCart={addToCart} 
                 individualProduct={individualProduct}
                 setIndividualProduct={setIndividualProduct}
+                computeCartQuantity={computeCartQuantity}  
               />}>
             </Route>
             <Route path="shop/:id" element={
               <ItemDetail  
                 individualProduct={individualProduct}
-                addToCart={addToCart} 
+                addToCart={addToCart}
+                computeCartQuantity={computeCartQuantity} 
+                
               />}>
             </Route>
-            <Route path="/cart" element={<Cart cartProducts={cartProducts} setCartProducts={setCartProducts} /> }></Route>
+            <Route path="/cart" element={
+              <Cart 
+                cartProducts={cartProducts} 
+                setCartProducts={setCartProducts}
+                computeCartQuantity={computeCartQuantity}  
+              /> }>
+            </Route>
           </Routes>
         
       </BrowserRouter>

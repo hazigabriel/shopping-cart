@@ -11,7 +11,7 @@ function ItemDetail(props) {
     function addProductToCart() {
         let productQuantity = parseInt(document.querySelector(".productQuantity").value);
         props.addToCart(props.individualProduct, productQuantity)
-     
+        props.computeCartQuantity()
     }
 
     function checkIfQuantityIsEligible() {
