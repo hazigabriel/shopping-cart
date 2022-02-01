@@ -2,7 +2,7 @@
    min-height: calc(100vh - 5rem - 2px); /*5rem for the navbar height,2px for its border*/
    padding-top: 2rem;
    display: grid;
-
+   gap: 1rem;
    grid-template-columns: 4fr 1fr;
  }
 
@@ -23,10 +23,16 @@
  .itemsTotal {
    display: flex;
    justify-content: space-between;
-
+    
  }
  .itemsTotal h2 {
-   margin: 1rem
+   margin: 1rem;
+   text-align: right;
+ }
+ .itemsTotal .discountPercent {
+   font-size: 0.8em;
+   color: #009879;
+   user-select: none;
  }
  .cartItem a img {
    height: 4rem;
@@ -84,15 +90,24 @@
 
 .promoCodeWrapper {
    background-color: #e2e2e2;
-   height: 11rem;
+   height: 12rem;
    width:15rem;
    display: flex;
    flex-direction: column;
    color:#313131
 }
 .promoCodeWrapper h3 {
-   margin: 1rem;
+  margin: 1rem 1rem 0.5rem 1rem;
    
+}
+.promoCodeWrapper .promoCodeHint {
+  color: #8d8d8d;
+  margin: 0 1rem 0.5rem;
+  opacity: 0.8;
+}
+.promoCodeWrapper .promoCodeHint span {
+  color: #009879;
+  font-weight: bold;
 }
 .promoCodeWrapper input {
    font-size: 1.5em;

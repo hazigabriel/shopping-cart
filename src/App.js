@@ -13,7 +13,8 @@ function App() {
   const [cartProducts, setCartProducts] = useState([])
   const [individualProduct, setIndividualProduct] = useState()
   const [totalCartItems, setTotalCartItems] = useState(0)
-  
+  const [isPromoActive, setIsPromoActive] = useState([false, "noDiscount"])
+
   let addToCart = async (product, quantity) => {
     let newCartProducts = cartProducts
     let currentProductIndex;
@@ -78,6 +79,9 @@ function computeCartQuantity(){
                 cartProducts={cartProducts} 
                 setCartProducts={setCartProducts}
                 computeCartQuantity={computeCartQuantity}  
+                isPromoActive={isPromoActive} 
+                setIsPromoActive={setIsPromoActive}
+                setIndividualProduct={setIndividualProduct}
               /> }>
             </Route>
           </Routes>

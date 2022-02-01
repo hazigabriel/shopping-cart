@@ -10,9 +10,10 @@ function ItemDetail(props) {
     
     function addProductToCart() {
         let productQuantity = parseInt(document.querySelector(".productQuantity").value);
+        document.querySelector(".productQuantity").value = 1;
         props.addToCart(props.individualProduct, productQuantity)
         props.computeCartQuantity()
-    }
+     }
 
     function checkIfQuantityIsEligible() {
         //ensure itemQualit is between 1 and 99

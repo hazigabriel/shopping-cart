@@ -10,15 +10,7 @@ function Cart(props) {
             <div className="gridItem">
                 
                 <section className="cartWrapper">
-                    <CartItems {...props}/> 
-
-                    <div className="promoCodeWrapper">
-                        <h3>Enter promo code</h3> 
-                        <input type="text"></input>
-                        <p className="submitPromoCode">Submit</p>
-                        <p className="validPromoCode">Valid code</p>
-                        <p className="invalidPromoCode">Invalid promo code</p>
-                    </div>               
+                    <CartItems {...props}/>           
                 </section>
 
             </div>
