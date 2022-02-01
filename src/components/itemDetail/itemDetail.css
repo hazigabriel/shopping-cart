@@ -147,9 +147,10 @@
     margin-bottom: 1rem;
 }
 
+
 @media  (max-width: 575px) {
     .itemDetailWrapper {
-        
+
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
@@ -166,7 +167,7 @@
 }
 @media (min-width: 576px) and (max-width: 767px) {
     .itemDetailWrapper {
-        
+
         grid-template-columns: 1fr;
         gap: 0.5rem;
     }
@@ -179,9 +180,9 @@
     .itemAddWrapper {
         margin-right: 1rem;
     }
-    
+
 }
-  
+
 @media (min-width: 768px) and (max-width: 991px){
     .itemDetailWrapper {
         gap:0;
@@ -198,6 +199,3 @@
     }
 
 }
-  
-
-   

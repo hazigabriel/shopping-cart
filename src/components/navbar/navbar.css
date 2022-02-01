@@ -56,14 +56,10 @@
 }
 .navbarLinks a {
     transition: 0.3s ease-in-out;
-    
     position: relative;
 }
-
 @media  (max-width: 575px) {
     .navbarLinks {
         gap: 1rem;
     }
 }
-  
-   

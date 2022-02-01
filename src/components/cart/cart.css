@@ -159,6 +159,7 @@
 @media  (max-width: 575px) {
   .cartItems {
     margin-right: 1rem;
+    font-size: 0.9em;
   }
   .cartWrapper {
     min-height: 0;
@@ -180,7 +181,7 @@
   }
 
   .promoCodeWrapper {
- 
+
     width: calc(100% - 1rem)
   }
 }
@@ -190,7 +191,6 @@
     width: 12rem;
     margin-right: 1rem;
   }
-  
 }
 
 

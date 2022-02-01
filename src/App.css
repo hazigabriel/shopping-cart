@@ -27,8 +27,7 @@ font-family: 'Source Serif Pro', serif;
  
  }
 
-
-@media  (max-width: 575px) {
+ @media  (max-width: 575px) {
   .gridContainer {
     grid-template-columns: 1rem 1fr 1em;
   }
@@ -73,4 +72,3 @@ font-family: 'Source Serif Pro', serif;
     width: (100vw - 6rem)
   }  
 }
- 
