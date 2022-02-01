@@ -138,3 +138,65 @@
     color: #a5a5a5;
     background-color: #5a5a5a;
  }
+
+@media  (max-width: 575px) {
+    .categories {
+        margin: 0.5rem 0 -1rem -2rem;
+  
+        transform: scale(0.8);
+    }
+    .radioButtons {
+        display: flex;
+    }
+    .radioButtons .radio {
+        margin-right: 3vw;
+    }
+    .shopWrapper {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap:0
+    }
+    .shopContent {
+        grid-template-columns: 1fr;
+        
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .categories {
+        margin-left: 2rem
+    }
+    .radioButtons {
+     }
+    .radioButtons .radio {
+        margin-right: 3rem;
+    }
+    .shopWrapper {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+    }
+    .shopContent {
+        grid-template-columns: 1fr;
+
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .categories {
+        margin-left: 2rem
+    }
+    .radioButtons {
+        display: flex;
+    }
+    .radioButtons .radio {
+        margin-right: 5rem;
+    }
+    .shopWrapper {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+ 

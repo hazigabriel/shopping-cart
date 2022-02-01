@@ -59,12 +59,11 @@
     
     position: relative;
 }
-/* .navbarLinks a:nth-child(1):hover {
-    letter-spacing: 3px;
-    transform: translateX(6px); 
-   }
-.navbarLinks a:nth-child(2):hover {
-    letter-spacing: 2px;
-    transform: translateX(8px); 
-    margin-left: -16px; /* 8 letters for "checkout * 2px leter spacing
-} */
+
+@media  (max-width: 575px) {
+    .navbarLinks {
+        gap: 1rem;
+    }
+}
+  
+   

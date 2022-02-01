@@ -9,9 +9,8 @@ function Cart(props) {
         <div className="gridContainer">
             <div className="gridItem">
                 
-                <section className="cartWrapper">
-                    <CartItems {...props}/>           
-                </section>
+                <CartItems {...props}/>           
+                
 
             </div>
         </div>

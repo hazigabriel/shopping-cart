@@ -61,4 +61,12 @@ video {
     transform: translate(14rem, -12rem)
 
 }
- 
+
+@media  (max-width: 575px) {
+    .homepageCtaText:hover  + a .homepageCTA  {
+        transform: translate(0rem, 0rem)
+    }
+    .homepageCTA:hover {
+        transform: translate(0rem, 0rem)
+    }
+}
