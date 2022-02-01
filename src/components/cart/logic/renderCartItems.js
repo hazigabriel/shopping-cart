@@ -4,20 +4,25 @@ import { FaTrashAlt } from 'react-icons/fa';
 import {Link } from "react-router-dom"
 
 function CartItems(props) {
+    const [totalAmountDue, setTotalAmountDue] = useState(0)
     
-    
-    function getTotalDue(){
-        // const items = props.itemsToBeRendered;
-        // let total = 0;
+    useEffect(() => {
+        computeTotalDue()
+    }, [])
+    function computeTotalDue(){
+        let temp = props.cartProducts;
+        let total = 0;
         
-        // for(let i = 0; i < itemsToBeRendered.length; i++) {
-        //     total = total + (items[i][0].price * items[i][1])
-        // }
+        (function(){
+            temp.forEach(item => {
+                total = total + item[0].price *  item[1] 
+            })
+        })()
+      
 
-        
-        // setTotalDueAmount(total)
-        
-    }
+        setTotalAmountDue(total)
+       
+     }
      
     function decreaseQuantity(e){
         let currentId = e.target.parentElement.parentElement.id;
@@ -28,11 +33,19 @@ function CartItems(props) {
             currentProductIndex = index
             return item[0].id === currentId
         })
-         
-        newCartProducts[currentProductIndex][1] -= 1
- 
-        props.setCartProducts(newCartProducts)
-        console.log(props.cartProducts)
+        
+
+        if(newCartProducts[currentProductIndex][1] <= 1) {
+            return
+        } else {
+            newCartProducts[currentProductIndex][1] -= 1; 
+            
+        }
+        
+        computeTotalDue()
+        props.computeCartQuantity()
+        props.setCartProducts([...newCartProducts])
+     
     }
     function increaseQuantity(e) {
         let currentId = e.target.parentElement.parentElement.id;
@@ -44,28 +57,31 @@ function CartItems(props) {
             return item[0].id === currentId
         })
          
-        newCartProducts[currentProductIndex][1] += 1
+        if(newCartProducts[currentProductIndex][1] >= 99) {
+            newCartProducts[currentProductIndex][1] = 99;
+        } else {
+            newCartProducts[currentProductIndex][1] += 1; 
+        }
 
-        // setTotalQuantity(previousQuantity => previousQuantity + 1);.
-        props.setCartProducts(newCartProducts)
- 
- 
-        // for(let i = 1; i < tempItems.length; i++) {
-        //     if(tempItems[i].itemId == currentId) {
-        //         tempItems[i].quantity += 1;
-        //         document.querySelector(`#${tempItems[i].itemId}`).querySelector(".productQuantity").querySelector("h3").innerHTML = tempItems[i].quantity
-        //     }
-            
-        // }
-        // getTotalDue()
-        // //console.log(tempItems)
-        // props.setCartItems(tempItems)
-        // console.log(tempItems)
-        
+        computeTotalDue()
+        props.computeCartQuantity()
+        props.setCartProducts([...newCartProducts])
     }
-    
+    function deleteProduct(e){
+        let temp = props.cartProducts;
+        let idToBeRemoved = e.target.parentElement.parentElement.id
+        let indexToBeRemoved;
+        temp.find((item, index) => {
+            indexToBeRemoved = index;
+            return item[0].id === idToBeRemoved
+        })
+        temp.splice(indexToBeRemoved, 1)
+        props.setCartProducts([...temp])
+        computeTotalDue()
+   
+    }
     function conditionalRender() {
- 
+     
         if(props.cartProducts.length == 0) {
             return (
                 <div class  Name="cartItems">
@@ -91,14 +107,14 @@ function CartItems(props) {
                             <div className="productPrice">
                                 <p>€{item[0].price}</p>
                             </div>
-                            <div className="productRemove">
-                                <FaTrashAlt />
+                            <div className="productRemove" id={item[0].id}>
+                                <FaTrashAlt onClick={deleteProduct}/>
                             </div>
                         </div>
                     ))}
                     <div className="itemsTotal">
                         <h2>Total:</h2>
-                        <h2>PLACEHOLDER</h2>
+                        <h2>€{totalAmountDue}</h2>
                     </div>
                 </div>
             )
