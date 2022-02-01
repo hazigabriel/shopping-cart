@@ -14,7 +14,7 @@ function Homepage() {
                             <Link to="/shop">
                                 <div className="homepageCTA">
                                     <h2>Start shopping</h2>
-                                    <h2> {">>>>>>"} </h2>
+                                    <h3>use promo code "<span>99OFF</span>" at checkout for a surprise</h3>
                                 </div>
                             </Link>
                         </div>

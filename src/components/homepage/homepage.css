@@ -46,7 +46,14 @@ video {
    font-size: 0.9em;
    transform: translate(0, -12rem) 
 }
-
+.homepageCTA h3 {
+    color: #313131;
+    margin-top: 0.5rem;
+    font-size: 0.9em;
+}
+.homepageCTA h3 span {
+    color: #009879
+}
 .homepageCtaText:hover  + a .homepageCTA  {
     transform: translate(14rem, -12rem)
 }

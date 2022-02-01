@@ -13,8 +13,8 @@ function Shop(props) {
     
     
     function choseCategory(e) {
-        e.preventDefault()
-        e.target.parentElement.querySelector(".radioButton").checked = true
+        e.preventDefault();
+        e.target.parentElement.querySelector(".radioButton").checked = true;
         setCategory(e.target.parentElement.querySelector("p").innerHTML) //this being the category name
         
     }
@@ -38,7 +38,7 @@ function Shop(props) {
             <div className="gridItem">
                 <section className="shopWrapper">   
                     <div className="categories">
-                        <h3>category    </h3>
+                        <h3>category</h3>
                          
                         <form className="radioButtons">
                             <div className="radio"  >
@@ -71,6 +71,7 @@ function Shop(props) {
                             </div>
                         </form>
                     </div>
+
                     <Products 
                         products={category} 
                         addItem={addItem}

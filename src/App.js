@@ -13,13 +13,13 @@ function App() {
   const [cartProducts, setCartProducts] = useState([])
   const [individualProduct, setIndividualProduct] = useState()
   const [totalCartItems, setTotalCartItems] = useState(0)
-  const [isPromoActive, setIsPromoActive] = useState([false, "noDiscount"])
+  const [isPromoActive, setIsPromoActive] = useState([false, "no discount"])
 
-  let addToCart = async (product, quantity) => {
+  let addToCart = (product, quantity) => {
     let newCartProducts = cartProducts
     let currentProductIndex;
       
-    if(cartProducts.length == 0 ) {
+    if(cartProducts.length === 0 ) {
       cartProducts.push([product, quantity])
     } else {
       const wasItemAdded =  cartProducts.find((item, index)=> {
@@ -33,7 +33,7 @@ function App() {
         newCartProducts.push([product, quantity])
       }
       
-      await setCartProducts(newCartProducts)
+      setCartProducts(newCartProducts)
     }
 }
 

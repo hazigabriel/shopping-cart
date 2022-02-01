@@ -18,7 +18,7 @@ function CartItems(props) {
         
         (function(){
             temp.forEach(item => {
-                total = total + item[0].price *  item[1] 
+                total = total + item[0].price *  item[1] ;
             })
         })()
       
@@ -39,7 +39,7 @@ function CartItems(props) {
         let currentProductIndex;
 
         props.cartProducts.find((item, index)=> {
-            currentProductIndex = index
+            currentProductIndex = index;
             return item[0].id === currentId
         })
         
@@ -51,19 +51,19 @@ function CartItems(props) {
             
         }
         
-        computeTotalDue()
-        props.computeCartQuantity()
+        computeTotalDue();
+        props.computeCartQuantity();
         props.setCartProducts([...newCartProducts])
      
     }
     function increaseQuantity(e) {
         let currentId = e.target.parentElement.parentElement.id;
-        let newCartProducts = props.cartProducts
+        let newCartProducts = props.cartProducts;
         let currentProductIndex;
 
         props.cartProducts.find((item, index)=> {
-            currentProductIndex = index
-            return item[0].id === currentId
+            currentProductIndex = index;
+            return item[0].id === currentId;
         })
          
         if(newCartProducts[currentProductIndex][1] >= 99) {
@@ -72,24 +72,26 @@ function CartItems(props) {
             newCartProducts[currentProductIndex][1] += 1; 
         }
 
-        computeTotalDue()
-        props.computeCartQuantity()
-        props.setCartProducts([...newCartProducts])
+        computeTotalDue();
+        props.computeCartQuantity();
+        props.setCartProducts([...newCartProducts]);
     }
     function deleteProduct(e){
         let temp = props.cartProducts;
-        let idToBeRemoved = e.target.parentElement.parentElement.id
+        let idToBeRemoved = e.target.parentElement.parentElement.id;
         let indexToBeRemoved;
+
         temp.find((item, index) => {
             indexToBeRemoved = index;
-            return item[0].id === idToBeRemoved
+            return item[0].id === idToBeRemoved;
         })
-        temp.splice(indexToBeRemoved, 1)
-        
-        props.setCartProducts([...temp])
-        computeTotalDue()
 
-        checkIfPromoShouldRemain()
+        temp.splice(indexToBeRemoved, 1);
+        
+        props.setCartProducts([...temp]);
+        computeTotalDue();
+        props.computeCartQuantity();
+        checkIfPromoShouldRemain();
  
     }
     function checkPromoCode(){
@@ -100,7 +102,7 @@ function CartItems(props) {
         let acceptablePromoCode = [
             "15OFF",
             "50OFF",
-            "99OFF"
+            "99OFF",
         ]
  
         if(promoCode == acceptablePromoCode[0]) {
@@ -184,7 +186,7 @@ function CartItems(props) {
                                 </Link>
                                 <div className="productQuantity">
                                     <h2 onClick={decreaseQuantity}>-</h2>
-                                    <h3 className>{item[1]}</h3>
+                                    <h3>{item[1]}</h3>
                                     <h2 onClick={increaseQuantity}>+</h2>
                                 </div>
                                 <div className="productPrice">

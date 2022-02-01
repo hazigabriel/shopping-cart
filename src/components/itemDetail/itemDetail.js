@@ -1,18 +1,18 @@
-import "./itemDetail.css"
-import allProducts from "../../data/allProducts"
+import "./itemDetail.css";
+import allProducts from "../../data/allProducts";
 import { useState, useEffect } from "react";
 
 function ItemDetail(props) {
     const [carouselImgIndex, setCarouselImgIndex] = useState(0);
     useEffect(() => {
-        setCarouselImgIndex(0)
+        setCarouselImgIndex(0);
     }, [])
     
     function addProductToCart() {
         let productQuantity = parseInt(document.querySelector(".productQuantity").value);
         document.querySelector(".productQuantity").value = 1;
-        props.addToCart(props.individualProduct, productQuantity)
-        props.computeCartQuantity()
+        props.addToCart(props.individualProduct, productQuantity);
+        props.computeCartQuantity();
      }
 
     function checkIfQuantityIsEligible() {
@@ -21,7 +21,7 @@ function ItemDetail(props) {
         if(productQuantity.value < 1) {
             productQuantity.value = 1;
         } else if(productQuantity.value > 99) {
-            productQuantity.value = 99
+            productQuantity.value = 99;
         }
      
     }
@@ -29,12 +29,12 @@ function ItemDetail(props) {
     function increaseQuantity() {
         let productQuantity = document.querySelector(".productQuantity");
         productQuantity.value = parseInt(productQuantity.value) +  1;
-        checkIfQuantityIsEligible()
+        checkIfQuantityIsEligible();
     }
     function decreaseQuantity() {
         let productQuantity = document.querySelector(".productQuantity");
         productQuantity.value = parseInt(productQuantity.value) -  1;
-        checkIfQuantityIsEligible()
+        checkIfQuantityIsEligible();
     }
 
 
@@ -69,24 +69,23 @@ function ItemDetail(props) {
             if(carouselImages[tempIndex + 1]) {
                
                 tempIndex = tempIndex + 1;
-                imageSource.src = [carouselImages[tempIndex]]
+                imageSource.src = [carouselImages[tempIndex]];
                
             } 
         } else {
             if(carouselImages[tempIndex - 1]) {
        
                 tempIndex = tempIndex - 1;
-                imageSource.src = [carouselImages[tempIndex]]
+                imageSource.src = [carouselImages[tempIndex]];
           
             }
         }
 
         setCarouselImgIndex(tempIndex)
-         // >
-        //&lt;
+       
     }
 
-    //the following two function are checking if the product has info for page number/material, if the info it's avail it's rendered
+    //the following two functions are checking if the product has info for page number/material, if the info it's avail it's rendered
     function pageNumber() {
         if(props.individualProduct.pages) {
             return (
