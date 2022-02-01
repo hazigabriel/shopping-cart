@@ -18,7 +18,7 @@ const books =  [
                         </p>
                     </div>,
         image: [peru1, peru2],
-        price: 25.00,
+        price: 24.99,
         dimensions: "H25 x L22cm ",
         weight: "1.05Kg ",
         pages: 240,
@@ -57,7 +57,7 @@ const books =  [
                         </p>
                     </div>,
         image: [hokusai],
-        price: 24.95,
+        price: 24.99,
         dimensions: "H22.6 x L16cm ",
         weight: "0.85kg",
         pages: 224,
@@ -78,7 +78,7 @@ const books =  [
                         </p>
                     </div>,
         image: [renaissance],
-        price: 45.00,
+        price: 44.99,
         dimensions: "H29.5 x L23.5cm",
         weight: "2kg",
         pages: 320,

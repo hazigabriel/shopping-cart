@@ -20,7 +20,7 @@ const jewellery =  [
                         </p>
                     </div>,
         image: [greekHorse1, greekHorse2],
-        price: 35.00,
+        price: 34.99,
         dimensions: "Length: 46cm, Pendant: L4 x W3cm",
         weight: "0.01kg ",
         pages: false,
@@ -38,7 +38,7 @@ const jewellery =  [
                         </p>
                     </div>,
         image: [ramBracelet],
-        price: 120.00,
+        price: 119.99,
         dimensions: "Dia.8cm ",
         weight: "0.060Kg",
         pages: false,
@@ -80,7 +80,7 @@ const jewellery =  [
                         </p>
                     </div>,
         image: [bull],
-        price: 45.00,
+        price: 44.99,
         dimensions: "H2.7 x W1.9 x L2cm",
         weight: "0.02Kg",
         pages: false,
@@ -101,7 +101,7 @@ const jewellery =  [
                         </p>
                     </div>,
         image: [horus1, horus2],
-        price: 120.00,
+        price: 119.99,
         dimensions: "Length: 44cm, Pendant: L2.5 x W1cm",
         weight: "0.30Kg ",
         pages: false,
@@ -117,7 +117,7 @@ const jewellery =  [
                        
                     </div>,
         image: [broch],
-        price: 115.00,
+        price: 114.99,
         dimensions: "Length: 44cm, Pendant: L1 x W1cm   ",
         weight: "0.10 Kg ",
         pages: false,

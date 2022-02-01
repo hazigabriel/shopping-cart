@@ -8,7 +8,10 @@ import ife1 from "../images/replicas/head-of-ife-1.jpg"
 import ife2 from "../images/replicas/head-of-ife-2.jpg"
 import rosetta1 from "../images/replicas/rosetta-stone-1.jpg"
 import rosetta2 from "../images/replicas/rosetta-stone-2.jpg"
-
+import cat1 from "../images/replicas/egyptean-cat-1.jpg"
+import cat2 from "../images/replicas/egyptean-cat-2.jpg"
+import athlete1 from "../images/replicas/athlete-1.jpg"
+import athlete2 from "../images/replicas/athlete-2.jpg"
 
 const replicas =  [
     {
@@ -23,7 +26,7 @@ const replicas =  [
                         </p>
                     </div>,
         image: [fuji1, fuji2],
-        price: 40.00,
+        price: 39.99,
         dimensions: "H18.5 x W0.5 x L27cm ",
         weight: "0.12kg ",
         pages: false,
@@ -62,7 +65,7 @@ const replicas =  [
                         </p>
                     </div>,
         image: [ife1, ife2],
-        price: 1600,
+        price: 1599.99,
         dimensions: "H35 x W13.5 x L18cm m",
         weight: "1.35kg ",
         pages: false,
@@ -80,7 +83,7 @@ const replicas =  [
                         </p>
                     </div>,
         image: [babylon1, babylon2],
-        price: 60.00,
+        price: 59.99,
         dimensions: "H21.5 x W5.5 x L12cm",
         weight: "1.04kg ",
         pages: false,
@@ -98,11 +101,56 @@ const replicas =  [
                         </p>
                     </div>,
         image: [rosetta1, rosetta2],
-        price: 125.00,
+        price: 124.99,
         dimensions: "H33 x W9 x L20cm ",
         weight: "4.80Kg ",
         pages: false,
         material: "Resin",
+    },
+    {
+        id: "r6",
+        name: "Egyptian Cat Bronze Replica",
+        description: <div className="productDescription">
+                        <p>
+                            Exclusive to the Fake British Museum, a bronze replica of a statue of the cat goddess Bastet, based on an original artefact from the Fake British Museum's collection.
+                        </p>
+                        <p>
+                            The bronze original dates from around 664-30 BC and is shown in the classic seated position. The cat wears a basket-shaped amulet and counterpoise incised around the neck. The earrings have been added to the piece in a similar style to those that would have been on the original.                         
+                        </p>
+                        <p>
+                            The Gayer-Anderson Cat is a sacred temple cat sculpture from the Late Period of ancient Egypt. The regal and highly decorated bronze statue wears gold earrings and a gold nose ring. Her silver breastplate is decorated with the sacred eye of the god Horus, beneath which is an ornamental scarab and silvered disc. The cat represents the goddess Bastet and is named after Major Robert Grenville Gayer-Anderson who donated the cat to the British Museum in 1939. Cats were highly revered in ancient Egypt and were often found in temples as Bastet’s representative.
+                        </p>
+                    </div>,
+        image: [cat1, cat2],
+        price: 99.99,
+        dimensions: "H10.5 x W3.5 x L6.5cm",
+        weight: "0.28Kg",
+        pages: false,
+        material: "Oxidised Bronze with gold plated brass earrings",
+    },
+    {
+        id: "r7",
+        name: "Head of a Victorious Athlete Replica",
+        description: <div className="productDescription">
+                        <p>
+                            A resin replica bust of a bronze known as the Benevento Head.
+                        </p>
+                        <p>
+                            Also known as ‘The Head of a Victorious Athlete’, the original dates to around 50 BC and was found during an excavation of Herculaneum. The head was likely to have been mounted on a marble hermaic pillar, and was decorated with glass inlays for the eyes and red copper lips. The olive crown on his head reference the prizes awarded to victorious athletes at the Olympian games.
+                        </p>
+                        <p>
+                            The original bronze is currently housed in the Musée du Louvre, Paris.
+                        </p>
+                        <p>
+                            An extraordinary home ornament inspired by the long-held influence of Ancient Greek statue in art and architecture.
+                        </p>
+                    </div>,
+        image: [athlete1, athlete2],
+        price: 474.99,
+        dimensions: "H44 x W20 x L22cm",
+        weight: "7.50Kg",
+        pages: false,
+        material: "Hand-finished resin",
     }
     
 
