@@ -35,7 +35,7 @@ function Shop(props) {
 
     return (
         <div className="gridContainer  shopGrid">
-            <div className="gridItem">
+            <div className="itemGridItem">
                 <section className="shopWrapper">   
                     <div className="categories">
                         <h3>category</h3>

@@ -4,6 +4,8 @@
     width:100%;
     height: calc(100vh - 5rem - 2px); /*5rem for the navbar height,2px for its border*/
     overflow: hidden;
+    user-select: none;
+
 }
 video {
     position: absolute; 
@@ -13,7 +15,8 @@ video {
     min-height: 100%;
     z-index: -1;
     background-size: cover;
-    overflow: hidden important;
+    overflow: hidden;
+    user-select: none;
  
 }
 .videoWrapper h1 {

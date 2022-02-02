@@ -164,11 +164,13 @@
   .cartWrapper {
     min-height: 0;
     grid-template-columns: 1fr;
+    margin-bottom: 2rem;
   }
 
   .promoCodeWrapper {
     width: calc(100% - 1rem)
   }
+
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -178,6 +180,8 @@
   .cartWrapper {
     min-height: 0;
     grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+
   }
 
   .promoCodeWrapper {

@@ -32,8 +32,7 @@ font-family: 'Source Serif Pro', serif;
     grid-template-columns: 1rem 1fr 1em;
   }
   .gridItem {
-    width: calc(100vw - 1rem)
-  }
+   }
   .navbarLinks {
     margin-right: 1rem;
   }
@@ -44,20 +43,19 @@ font-family: 'Source Serif Pro', serif;
     grid-template-columns: 1rem 1fr 1rem;
   }
   .gridItem {
-    width: calc(100vw - 1rem)
-  }
+   }
   .navbarLinks {
     margin-right: 2rem;
   }
+  .itemGridItem {
+    width: default
+}
 }
 
 @media (min-width: 768px) and (max-width: 991px){
   .gridContainer {
     display: grid;
     grid-template-columns: 2rem 1fr 2rem;
-  }
-  .gridItem {
-    width: calc(100vw - 2rem)
   }
   .navbarLinks {
     margin-right: 2rem;
