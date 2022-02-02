@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.9a2b056d.css",
-    "main.js": "/shopping-cart/static/js/main.42bf6c01.js",
+    "main.js": "/shopping-cart/static/js/main.15b24ac7.js",
     "static/media/museum_stock_footage.mp4": "/shopping-cart/static/media/museum_stock_footage.8984d928187c78497d61.mp4",
     "static/media/inheritance-of-rome.jpg": "/shopping-cart/static/media/inheritance-of-rome.490ac259e390f20ce3d1.jpg",
     "static/media/fuji-wave-screen-1.jpg": "/shopping-cart/static/media/fuji-wave-screen-1.7b619a5c28ae3059f19d.jpg",
@@ -34,10 +34,10 @@
     "static/media/horus-necklance-2.jpg": "/shopping-cart/static/media/horus-necklance-2.07bcc849cf742ca62806.jpg",
     "index.html": "/shopping-cart/index.html",
     "main.9a2b056d.css.map": "/shopping-cart/static/css/main.9a2b056d.css.map",
-    "main.42bf6c01.js.map": "/shopping-cart/static/js/main.42bf6c01.js.map"
+    "main.15b24ac7.js.map": "/shopping-cart/static/js/main.15b24ac7.js.map"
   },
   "entrypoints": [
     "static/css/main.9a2b056d.css",
-    "static/js/main.42bf6c01.js"
+    "static/js/main.15b24ac7.js"
   ]
 }
