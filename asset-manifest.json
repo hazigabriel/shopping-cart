@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/shopping-cart/static/css/main.11fa5da1.css",
+    "main.js": "/shopping-cart/static/js/main.88fac4e3.js",
+    "static/media/museum_stock_footage.mp4": "/shopping-cart/static/media/museum_stock_footage.8984d928187c78497d61.mp4",
+    "static/media/inheritance-of-rome.jpg": "/shopping-cart/static/media/inheritance-of-rome.490ac259e390f20ce3d1.jpg",
+    "static/media/fuji-wave-screen-1.jpg": "/shopping-cart/static/media/fuji-wave-screen-1.7b619a5c28ae3059f19d.jpg",
+    "static/media/renaissance-to-goya.jpg": "/shopping-cart/static/media/renaissance-to-goya.3254d9a3d5a191d28434.jpg",
+    "static/media/rosetta-stone-1.jpg": "/shopping-cart/static/media/rosetta-stone-1.f4b4ed7b4464c2960c58.jpg",
+    "static/media/mesopotamia.jpg": "/shopping-cart/static/media/mesopotamia.2b44d390ba940a0162da.jpg",
+    "static/media/hokusai.jpg": "/shopping-cart/static/media/hokusai.e8fd2a1889abdf216658.jpg",
+    "static/media/anubis-ornament-1.jpg": "/shopping-cart/static/media/anubis-ornament-1.5428f6f95b2b347008b3.jpg",
+    "static/media/fuji-wave-screen-2.jpg": "/shopping-cart/static/media/fuji-wave-screen-2.056ef0603afef766ef43.jpg",
+    "static/media/babylonian-tablet-2.jpg": "/shopping-cart/static/media/babylonian-tablet-2.02f45332b45f274f28ab.jpg",
+    "static/media/persian-necklance.jpg": "/shopping-cart/static/media/persian-necklance.d100915df3d419a58ebe.jpg",
+    "static/media/little-world-history.jpg": "/shopping-cart/static/media/little-world-history.acd2c11d94f23effcb10.jpg",
+    "static/media/babylonian-tablet-1.jpg": "/shopping-cart/static/media/babylonian-tablet-1.94f714dfce4aaabfd092.jpg",
+    "static/media/anubis-ornament-2.jpg": "/shopping-cart/static/media/anubis-ornament-2.8b97ef60c5327b8556ac.jpg",
+    "static/media/green-rose-broch.jpg": "/shopping-cart/static/media/green-rose-broch.8d868ba81e54d6942d0c.jpg",
+    "static/media/rosetta-stone-2.jpg": "/shopping-cart/static/media/rosetta-stone-2.8fe753f66287813b4f60.jpg",
+    "static/media/ram-bracelet.jpg": "/shopping-cart/static/media/ram-bracelet.8d46382f84064c466236.jpg",
+    "static/media/head-of-ife-2.jpg": "/shopping-cart/static/media/head-of-ife-2.aad260e5de5232c0d596.jpg",
+    "static/media/head-of-ife-1.jpg": "/shopping-cart/static/media/head-of-ife-1.1ac9706ce7f7fc52b393.jpg",
+    "static/media/athlete-2.jpg": "/shopping-cart/static/media/athlete-2.4ca001139336bde53b30.jpg",
+    "static/media/athlete-1.jpg": "/shopping-cart/static/media/athlete-1.4cbf49f64d16bbd0a3d9.jpg",
+    "static/media/lamassu-winged-bull-cuffins.jpg": "/shopping-cart/static/media/lamassu-winged-bull-cuffins.4e89508bcf725ccee9fa.jpg",
+    "static/media/peru-2.jpg": "/shopping-cart/static/media/peru-2.52e35b60f2b053966690.jpg",
+    "static/media/peru-1.jpg": "/shopping-cart/static/media/peru-1.b4c775e047d3c42b120c.jpg",
+    "static/media/horus-necklance-1.jpg": "/shopping-cart/static/media/horus-necklance-1.43c82252a2dae8d44731.jpg",
+    "static/media/greek-horse-1.jpg": "/shopping-cart/static/media/greek-horse-1.0e7f4ce33de961c1deab.jpg",
+    "static/media/egyptean-cat-2.jpg": "/shopping-cart/static/media/egyptean-cat-2.3383a3d1453064ec9d5e.jpg",
+    "static/media/egyptean-cat-1.jpg": "/shopping-cart/static/media/egyptean-cat-1.70dc11ec1cf0d97165b6.jpg",
+    "static/media/greek-horse-2.jpg": "/shopping-cart/static/media/greek-horse-2.7564ce115e8811ea503f.jpg",
+    "static/media/horus-necklance-2.jpg": "/shopping-cart/static/media/horus-necklance-2.07bcc849cf742ca62806.jpg",
+    "index.html": "/shopping-cart/index.html",
+    "main.11fa5da1.css.map": "/shopping-cart/static/css/main.11fa5da1.css.map",
+    "main.88fac4e3.js.map": "/shopping-cart/static/js/main.88fac4e3.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11fa5da1.css",
+    "static/js/main.88fac4e3.js"
+  ]
+}
