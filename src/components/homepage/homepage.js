@@ -11,7 +11,7 @@ function Homepage() {
                             <div className="homepageCtaText">
                                 <h2>Welcome to the fake British Museum shop</h2>
                             </div>
-                            <Link to="/shop">
+                            <Link to="/shopping-cart/shop">
                                 <div className="homepageCTA">
                                     <h2>Start shopping</h2>
                                     <h3>use promo code "<span>99OFF</span>" at checkout for a surprise</h3>
