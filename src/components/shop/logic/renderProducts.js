@@ -38,7 +38,7 @@ function Products(props) {
         <div className="shopContent">
             {productsToBeRendered.map(product => (
                 <div className="productWrapper" key={product.id} id={product.id}>
-                    <Link onClick={updateDisplayedProduct} to={`/shop/${product.id }`}>
+                    <Link onClick={updateDisplayedProduct} to={`/shopping-cart/shop/${product.id }`}>
                         <div className="productImageWrapper">
                             <img src={product.image[0]}></img>
                         </div>
@@ -51,7 +51,7 @@ function Products(props) {
                         <div className="addProduct" onClick={props.addItem}>
                             Add to cart
                         </div>
-                        <Link onClick={updateDisplayedProduct} to={`/shop/${product.id }`}>
+                        <Link onClick={updateDisplayedProduct} to={`/shopping-cart/shop//${product.id }`}>
                             <div className="viewProductDetails">
                                 View details
                             </div>

@@ -56,7 +56,8 @@ function computeCartQuantity(){
         />
           <Routes>
             <Route path="/" element={<Homepage />}></Route>
-            <Route path="/shop" element={
+            <Route path="/shopping-cart" element={<Homepage />}></Route>
+            <Route path="/shopping-cart/shop" element={
               <Shop 
                 cartProducts={cartProducts} 
                 setCartProducts={setCartProducts} 
@@ -66,7 +67,7 @@ function computeCartQuantity(){
                 computeCartQuantity={computeCartQuantity}  
               />}>
             </Route>
-            <Route path="shop/:id" element={
+            <Route path="/shopping-cart/shop/:id" element={
               <ItemDetail  
                 individualProduct={individualProduct}
                 addToCart={addToCart}
@@ -74,7 +75,7 @@ function computeCartQuantity(){
                 
               />}>
             </Route>
-            <Route path="/cart" element={
+            <Route path="/shopping-cart/cart" element={
               <Cart 
                 cartProducts={cartProducts} 
                 setCartProducts={setCartProducts}

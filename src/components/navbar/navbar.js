@@ -9,7 +9,7 @@ function Navbar(props) {
         <div className="gridContainer navbarGrid"> {/*added navbarGrid class so that we can set up a bg color for the whole width */}
              <section className="navbar gridItem">
                 <div className="logoWrapper">
-                    <Link to="/">
+                    <Link to="/shopping-cart">
                         <div className="logo">
                             Museum 
                             <br></br>
@@ -19,10 +19,10 @@ function Navbar(props) {
                 </div>
 
                 <div className="navbarLinks">
-                    <Link to="/shop">
+                    <Link to="/shopping-cart/shop">
                         Shop
                     </Link>
-                    <Link to="/cart">
+                    <Link to="/shopping-cart/cart">
                         Cart({props.totalCartItems})
                     </Link>
                 </div>

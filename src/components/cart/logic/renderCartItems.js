@@ -178,10 +178,10 @@ function CartItems(props) {
                     <div className="cartItems">
                         {props.cartProducts.map(item => (
                             <div key={item[0].id} id={item[0].id} className="cartItem"> 
-                                <Link onClick={updateDisplayedProduct} to={`/shop/${item[0].id}`}>
+                                <Link onClick={updateDisplayedProduct} to={`/shopping-cart/shop/${item[0].id}`}>
                                     <img src={item[0].image[0]}></img>
                                 </Link>
-                                <Link onClick={updateDisplayedProduct} to={`/shop/${item[0].id}`}>
+                                <Link onClick={updateDisplayedProduct} to={`/shopping-cart/shop/${item[0].id}`}>
                                     <p>{item[0].name}</p>
                                 </Link>
                                 <div className="productQuantity">

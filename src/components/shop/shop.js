@@ -1,17 +1,13 @@
 import "./shop.css"
 import React, {useState, useEffect} from 'react';
 import allProducts from "../../data/allProducts"
-import {Link } from "react-router-dom"
 import Products from "./logic/renderProducts" 
 
 
 function Shop(props) {
 
     const [category, setCategory] = useState('All Items')
-    const [cartItems, setCartItems] = useState(props.cartItems);
-    const [cartItemss, setCartItemss] = useState()
-    
-    
+
     function choseCategory(e) {
         e.preventDefault();
         e.target.parentElement.querySelector(".radioButton").checked = true;
@@ -35,7 +31,7 @@ function Shop(props) {
 
     return (
         <div className="gridContainer  shopGrid">
-            <div className="itemGridItem">
+            <div className="gridItem">
                 <section className="shopWrapper">   
                     <div className="categories">
                         <h3>category</h3>
