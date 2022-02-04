@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+## About 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[Live project](https://hazigabriel.github.io/shopping-cart/), hosted via github pages.
 
-## Available Scripts
+This CRUD app was deveveloped using ReactJs in order to learn about react-router. We have a simple 3 page website(home, shop, cart) where the user can add products items in their cart, either via the main shop page or via the items's dedicated page and update their quantity or delete them from the cart.
 
-In the project directory, you can run:
+Besides react-router, I've also learned more about passing states through different componenets and conditional rendering. 
 
-### `npm start`
+Initially I wanted to use the [Metropolitan Museum of Art's API](https://www.programmableweb.com/api/metropolitan-museum-art-met-collection-rest-api-v10) but I wanted to have a specific array of items to be rendered and simmilar information, and I could not generate ID's to be rendered as the API returns more than 85.000 values. Another option was to find specific values to be rendered, and call them in an useEffect hook but rather can calling an amount of X items manually from an array I have decided to visit the British Museum souvenir shop and create my own objects with items to be rendered.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project was created as part of the [theOdinProject's Javascript curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript#react-js)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Features
+-Shop page where the user can add an item directly to the cart or view it's details;
 
-### `npm test`
+-Individual item page where more information is displayed about the product, and if the product has more than 1 image available a function image carousel is rendered;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-The possibility to promotional codes and validate them. (the promo codes are 15OFF, 50OFF and 99OFF, both  upper and lower cases are valid);
 
-### `npm run build`
+-User can visit the item page through the cart upp, and increase/decrese the item quantity or delete the product;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-The option to filter products by category;
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-Responsive design;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## How to run locally
 
-### `npm run eject`
+> Clone the repo
+> Open your terminal, run "npm install" to install the requiredapp dependencies
+> Run "npm start" in order to
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+ 
