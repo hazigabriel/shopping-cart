@@ -8,7 +8,7 @@ Besides react-router, I've also learned more about passing states through differ
 
 Initially I wanted to use the [Metropolitan Museum of Art's API](https://www.programmableweb.com/api/metropolitan-museum-art-met-collection-rest-api-v10) but I wanted to have a specific array of items to be rendered and simmilar information, and I could not generate ID's to be rendered as the API returns more than 85.000 values. Another option was to find specific values to be rendered, and call them in an useEffect hook but rather can calling an amount of X items manually from an array I have decided to visit the British Museum souvenir shop and create my own objects with items to be rendered.
 
-This project was created as part of the [theOdinProject's Javascript curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript#react-js)
+This project was created as part of the [theOdinProject's Javascript curriculum](https://www.theodinproject.com/paths/full-stack-javascript/courses/javascript#react-js).
 
 ## Features
 -Shop page where the user can add an item directly to the cart or view it's details;
@@ -25,8 +25,8 @@ This project was created as part of the [theOdinProject's Javascript curriculum]
 
 ## How to run locally
 
-> Clone the repo
-> Open your terminal, run "npm install" to install the requiredapp dependencies
-> Run "npm start" in order to
+-Clone the repo
+- Open your terminal, run "npm install" to install the requiredapp dependencies
+- Run "npm start" in order to
 
  
