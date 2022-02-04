@@ -25,7 +25,7 @@ This project was created as part of the [theOdinProject's Javascript curriculum]
 
 ## How to run locally
 
--Clone the repo
+- Clone the repo
 - Open your terminal, run "npm install" to install the requiredapp dependencies
 - Run "npm start" in order to
 
