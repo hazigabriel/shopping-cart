@@ -2,7 +2,7 @@
 
 [Live project](https://hazigabriel.github.io/shopping-cart/), hosted via github pages.
 
-This CRUD app was developed using ReactJs in order to learn about react-router. We have a simple 3 page website(home, shop, cart) where the user can add products in their cart either via the main shop page or via the items's dedicated page and update the item's quantity or delete it from the cart.
+This app was developed using ReactJs in order to learn about react-router. We have a simple 3 page website(home, shop, cart) where the user can add products in their cart either via the main shop page or via the items's dedicated page and update the item's quantity or delete it from the cart.
 
 Besides react-router I've also learned more about passing states through different componenets and conditional rendering. 
 
