@@ -218,4 +218,4 @@ function CartItems(props) {
     )
 }
 
-export default CartItems    
+export default CartItems

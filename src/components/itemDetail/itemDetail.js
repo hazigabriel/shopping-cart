@@ -9,7 +9,7 @@ function ItemDetail(props) {
     }, [])
     
     function addProductToCart() {
-        let productQuantity = parseInt(document.querySelector(".productQuantity").value);
+        const productQuantity = parseInt(document.querySelector(".productQuantity").value);
         document.querySelector(".productQuantity").value = 1;
         props.addToCart(props.individualProduct, productQuantity);
         props.computeCartQuantity();
@@ -61,23 +61,22 @@ function ItemDetail(props) {
     }
 
     function handleCarousel(e) {
-        let carouselImages = props.individualProduct.image;
-        let imageSource = e.target.parentElement.querySelector("img");
-        let tempIndex = carouselImgIndex;
+        const carouselImages = props.individualProduct.image;
+        const imageSource = e.target.parentElement.querySelector("img");
+        const tempIndex = carouselImgIndex;
       
-         if(e.target.innerHTML == "&gt;") { //this is > 
+         if(e.target.innerHTML == "&gt;") { //this is ">", the "greater than" sign 
             if(carouselImages[tempIndex + 1]) {
                
                 tempIndex = tempIndex + 1;
                 imageSource.src = [carouselImages[tempIndex]];
                
             } 
-        } else {
+        } else { //this convers the  "<", the "less than" sign 
             if(carouselImages[tempIndex - 1]) {
-       
                 tempIndex = tempIndex - 1;
                 imageSource.src = [carouselImages[tempIndex]];
-          
+
             }
         }
 

@@ -1,5 +1,5 @@
 import "./shop.css"
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import allProducts from "../../data/allProducts"
 import Products from "./logic/renderProducts" 
 
@@ -9,9 +9,9 @@ function Shop(props) {
     const [category, setCategory] = useState('All Items')
 
     function choseCategory(e) {
-        e.preventDefault();
+        const categoryName = e.target.parentElement.querySelector("p").innerHTML
         e.target.parentElement.querySelector(".radioButton").checked = true;
-        setCategory(e.target.parentElement.querySelector("p").innerHTML) //this being the category name
+        setCategory(categoryName)  
         
     }
     
@@ -25,6 +25,7 @@ function Shop(props) {
                 props.computeCartQuantity()
             }
         })
+
      }
 
 
