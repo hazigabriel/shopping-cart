@@ -21,6 +21,7 @@ function Homepage() {
                         </div>
                     </div>
                 </div>
+                
                 <video loop autoPlay muted>
                     <source
                         src={video}
